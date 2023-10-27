@@ -1,11 +1,11 @@
 import { useNavigation } from "@react-navigation/native";
 import { TouchableOpacity,Text,StyleSheet } from "react-native";
 
-const EventItem = ({id,title,description}) =>{
+const EventItem = ({id,name,description,qrCode}) =>{
     const navigation = useNavigation()
     return (
-        <TouchableOpacity style={styles.card} onPress={() =>navigation.navigate("Event", {eventId: id, title, description})}>
-            <Text>{title}</Text>
+        <TouchableOpacity style={styles.card} onPress={() =>navigation.navigate("Event", {eventId: id, name, description})}>
+            <Text>{name}</Text>
             <Text>{description}</Text>
         </TouchableOpacity>
 
